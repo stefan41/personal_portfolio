@@ -1,0 +1,213 @@
+// =========== colors ===========  //
+
+$dark_blue: #011627;
+$yellow: #ECA72C;
+$white: #FCF7FF;
+$lapis: #2660A4;
+$dark_purple: #330C2F;
+$black: #010108;
+$green: #1AA929;
+
+$sans1: 'Barlow', sans-serif;
+$sans2: 'Karla', sans-serif;
+$sans3: 'Nunito Sans', sans-serif;
+$sans4: 'Quicksand', sans-serif;
+$sans5: 'Varela Round', sans-serif;
+
+$serif1: 'Libre Baskerville', serif;
+$serif2: 'Playfair Display', serif;
+$serif3: 'Sanchez', serif;
+$serif4: 'Lora', serif;
+
+$cursive1: 'Abril Fatface', cursive;
+$cursive2: 'Bowlby One SC', cursive;
+$cursive3: 'Righteous', cursive;
+$cursive4: 'Sigmar One', cursive;
+
+
+*	{
+	box-sizing: border-box;
+
+	&:focus	{
+		outline: none;
+	}
+}
+
+html, body 	{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+html	{
+	font-size: 62.5%;
+}
+
+body 	{
+	font-size: 2rem;
+	font-family: $sans4;
+	background-color: $white;
+	color: $black;
+}
+
+img 	{
+	max-width: 100%;
+}
+
+/* ========== Custom Classes ========== */
+
+.center	{
+	text-align: center;
+
+	div &	{
+		margin: 0 auto;
+	}
+}
+
+.pad1 { padding: 1rem; }
+.pad2 { padding: 2rem; }
+.pad3 { padding: 3rem; }
+.pad4 { padding: 4rem; }
+
+.mar1 { margin: 1rem auto; }
+.mar2 { margin: 2rem auto; }
+.mar3 { margin: 3rem auto; }
+.mar4 { margin: 4rem auto; }
+
+.clearfix 	{
+	clear: both;
+}
+
+.container-fluid 	{
+	width: 90%;
+	margin: 0 auto;
+}
+
+%btn 	{
+	padding: 1.5rem 2rem;
+	font-size: 100%;
+	border: none;
+	box-shadow: 1px 1px 15px 0 #b9b9b9;
+	transition: .3s all ease-out;
+
+	&:hover	{
+		box-shadow: 2px 2px 15px 0 #999;
+		cursor: pointer;
+	}
+}
+
+.btn 	{
+	@extend %btn;
+}
+
+.btn-primary	{
+	@extend %btn;
+	background-color: $dark_blue;
+	color: $white;
+}
+
+.btn-info	{
+	@extend %btn;
+	background-color: $yellow;
+	color: $white;
+}
+
+.btn-seduce	{
+	@extend %btn;
+	background-color: $dark_purple;
+	color: $white;
+}
+
+.btn-success	{
+	@extend %btn;
+	background-color: $green;
+	color: $white;
+}
+
+.btn-dark	{
+	@extend %btn;
+	background-color: $black;
+	color: $white;
+}
+
+.btn-light	{
+	@extend %btn;
+	background-color: $white;
+	color: $black;
+}
+
+/* ----------- scroll to top button ----------- */
+
+.scrl2top	{
+	position: fixed;
+	right: 5rem;
+	bottom: 5rem;
+	padding: 2rem 2.4rem;
+	border: none;
+	background-color: $dark_purple;
+	color: $white;
+	font-size: 150%;
+	transition: .5s all ease-out;
+
+	&:hover	{
+		transform: rotate(360deg);
+		border-radius: 50%;
+	}
+
+	&:active {
+		//transform: rotate(-360deg);
+		//border-radius: none;
+	}
+}
+
+/* =======================================
+			Home Page Styles
+======================================= */
+
+.site-header	{
+
+
+	.main-nav	{
+		display: flex;
+		justify-content: flex-end;
+
+		ul 	{
+			list-style-type: none;
+			margin: 0 2rem 0 0;
+			padding: 0;
+		}
+
+		li 	{
+			display: inline-block;
+		}
+
+		a 	{
+			display: inline-block;
+			color: $white;
+			text-decoration: none;
+			padding: .5rem 1rem;
+			border-bottom: 2px solid transparent;
+			transition: .3s all ease-out;
+
+			&:hover	{
+				border-bottom: 2px solid $white;
+			}
+		}
+	}
+}
+
+/* =======================================
+			About Page Styles
+======================================= */
+
+/* =======================================
+			Services Page Styles
+======================================= */
+
+/* =======================================
+			Gallery Page Styles
+======================================= */
+
+/* =======================================
+			Contact Page Styles
+======================================= */

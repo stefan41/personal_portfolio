@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="prindex-container">
+
+	<div class="projects">
+
+		{% for project in projects %}
+		<div class="project">
+			
+			<div class="project-thumbnail">
+				<img src="{{ project.screenshot.url }}">
+			</div>
+
+			<div class="project-content">
+				<h2>{{ project.title }}</h2>
+				<p>{{ project.description }}</p>
+				<p>{{ project.technology }}</p>
+				<p>Created on <span>{{ project.created_on.date }}</span></p>
+				<a href="{% url 'projects:detail' project.pk %}">Read More</a>
+			</div>
+
+		</div>
+		{% endfor %}
+
+	</div>
+
+</div>
+
+{% endblock %}
