@@ -19,29 +19,15 @@ body {
   font-size: 2rem;
   font-family: "Quicksand", sans-serif;
   background-color: #FCF7FF;
-  color: #010108;
+  color: #222222;
 }
 
 img {
   max-width: 100%;
 }
 
-.read-more {
-  padding: 1rem;
-  text-decoration: none;
-  background-color: #011627;
-  color: #FCF7FF;
-  border: 2px solid transparent;
-  transition: 0.3s all ease-out;
-}
-.read-more:hover {
-  border: 2px solid #011627;
-  color: #011627;
-  background-color: transparent;
-}
-
 .form-group input:not([type=submit]),
-.form-group textarea {
+.form-group textarea, .txtinput {
   border: 1px solid #d8d8d8;
   width: 100%;
   height: 5rem;
@@ -52,7 +38,7 @@ img {
   transition: 0.3s all ease-out;
 }
 .form-group input:focus:not([type=submit]),
-.form-group textarea:focus {
+.form-group textarea:focus, .txtinput:focus {
   box-shadow: 2px 2px 20px 0 #d8d8d8;
 }
 
@@ -105,14 +91,14 @@ div .center {
   margin: 0 auto;
 }
 
-.projects .project .read-more, .btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn, .read-more {
+.read-more, .btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn {
   padding: 1.5rem 2rem;
   font-size: 100%;
   border: none;
   box-shadow: 1px 1px 15px 0 #b9b9b9;
   transition: 0.3s all ease-out;
 }
-.projects .project .read-more:hover, .btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover, .read-more:hover {
+.read-more:hover, .btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover {
   box-shadow: 2px 2px 15px 0 #999;
   cursor: pointer;
 }
@@ -403,49 +389,6 @@ div .center {
   border: 2px solid red;
 }
 
-/* -------- site footer -------- */
-.site-footer {
-  margin: 10rem 0 0 0;
-}
-.site-footer .footer-credits {
-  background: #011627;
-  color: #FCF7FF;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.footer-widgets {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.footer-widgets .widget {
-  padding: 1rem;
-  width: 40rem;
-  min-width: 30rem;
-  margin: 1rem;
-}
-.footer-widgets .widget h2 {
-  text-align: center;
-}
-.footer-widgets .widget:nth-child(2) {
-  border: 1px dotted #999;
-}
-.footer-widgets .widget:nth-child(2) ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.footer-widgets .widget:nth-child(2) a {
-  text-decoration: none;
-  transition: 0.3s all ease-out;
-  animation: shake 0.5s 1;
-  animation-play-state: paused;
-}
-.footer-widgets .widget:nth-child(2) a:hover {
-  animation-play-state: running;
-}
-
 /* ===============================================
 				Project Index
 =============================================== */
@@ -458,7 +401,8 @@ div .center {
   margin: 2rem;
   min-width: 30rem;
 }
-.projects .project .read-more {
+
+.read-more {
   padding: 1rem;
   text-decoration: none;
   background-color: #011627;
@@ -466,7 +410,7 @@ div .center {
   border: 2px solid transparent;
   transition: 0.3s all ease-out;
 }
-.projects .project .read-more:hover {
+.read-more:hover {
   border: 2px solid #011627;
   color: #011627;
   background-color: transparent;
@@ -509,11 +453,116 @@ div .center {
   color: #666;
 }
 
+/* ===============================================
+				Blog - Index 
+=============================================== */
+.blogindex-container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55% 35%;
+  justify-content: space-between;
+}
+.blogindex-container .posts-wrapper .post {
+  margin: 10rem auto;
+  box-shadow: 2px 2px 25px 0 #d8d8d8;
+}
+.blogindex-container .posts-wrapper .post .content {
+  padding: 2rem;
+}
+.blogindex-container .posts-wrapper .post .content .meta {
+  color: #999;
+}
+.blogindex-container .posts-wrapper .post .content .body {
+  line-height: 3rem;
+  letter-spacing: 0.01rem;
+  font-size: 105%;
+}
+.blogindex-container .posts-sidebar {
+  display: grid;
+  justify-content: center;
+}
+.blogindex-container .posts-sidebar .sidebar-widget h4 {
+  color: #333;
+}
+
+/* ===============================================
+				Blog - Detail 
+=============================================== */
+/* ----------- post comments ----------- */
+.leave-comment {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.post-comments {
+  width: 60%;
+  margin: 0 auto;
+}
+.post-comments .comment {
+  box-shadow: 2px 2px 25px 0 #d8d8d8;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.post-comments .comment footer p {
+  color: #999;
+  font-size: 80%;
+}
+
+/* ===============================================
+			Blog - Category Archive
+=============================================== */
+/* ===============================================
+			Blog - Author Archive
+=============================================== */
+/* ===============================================
+			Blog - Date Archive
+=============================================== */
 .defpage_head {
   position: static;
   background-color: #011627;
   color: #FCF7FF;
   margin-bottom: 10rem;
+}
+
+/* -------- site footer -------- */
+.site-footer {
+  margin: 10rem 0 0 0;
+}
+.site-footer .footer-credits {
+  background: #011627;
+  color: #FCF7FF;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-widgets .widget {
+  padding: 1rem;
+  width: 40rem;
+  min-width: 30rem;
+  margin: 1rem;
+}
+.footer-widgets .widget h2 {
+  text-align: center;
+}
+.footer-widgets .widget:nth-child(2) ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-widgets .widget:nth-child(2) a {
+  text-decoration: none;
+  transition: 0.3s all ease-out;
+  animation: shake 0.5s 1;
+  animation-play-state: paused;
+}
+.footer-widgets .widget:nth-child(2) a:hover {
+  animation-play-state: running;
 }
 
 .footer-socials {

@@ -254,63 +254,7 @@
 	
 }
 
-/* -------- site footer -------- */
 
-.site-footer 	{
-	margin: 10rem 0 0 0;
-
-	.footer-credits	{
-		//background: #151B25;
-		background: base.$dark_blue;
-		color: base.$white;
-		padding: 1rem;
-		margin-top: 2rem;
-	}
-}
-
-.footer-widgets	{
-	//border: 1px dotted red;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-	// place-items: center;
-	// grid-gap: 1rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	.widget 	{
-		//box-shadow: 1px 1px 15px 0 #888;
-		padding: 1rem;
-		width: 40rem;
-		min-width: 30rem;
-		margin: 1rem;
-
-		h2	{
-			text-align: center;
-		}
-
-		&:nth-child(2)	{
-			border: 1px dotted #999;
-
-			ul 	{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-
-			a 	{
-				text-decoration: none;
-				transition: .3s all ease-out;
-				animation: shake .5s 1;
-				animation-play-state: paused;
-
-				&:hover	{
-					animation-play-state: running;
-				}
-			}
-		}
-	}
-}
 
 /* ===============================================
 				Project Index
@@ -324,22 +268,22 @@
 		width: 30%;
 		margin: 2rem;
 		min-width: 30rem;
+	}
+}
 
-		.read-more 	{
-			@extend %btn;
-			padding: 1rem;
-			text-decoration: none;
-			background-color: base.$dark_blue;
-			color: base.$white;
-			border: 2px solid transparent;
-			transition: .3s all ease-out;
+.read-more 	{
+	@extend %btn;
+	padding: 1rem;
+	text-decoration: none;
+	background-color: base.$dark_blue;
+	color: base.$white;
+	border: 2px solid transparent;
+	transition: .3s all ease-out;
 
-			&:hover	{
-				border: 2px solid base.$dark_blue;
-				color: base.$dark_blue;
-				background-color: transparent;
-			}
-		}
+	&:hover	{
+		border: 2px solid base.$dark_blue;
+		color: base.$dark_blue;
+		background-color: transparent;
 	}
 }
 
@@ -393,6 +337,94 @@
 	}
 }
 
+/* ===============================================
+				Blog - Index 
+=============================================== */
+
+.blogindex-container	{
+	width: 80%;
+	margin: 0 auto;
+	//border: 2px solid #d8d8d8;
+	display: grid;
+	grid-template-columns: 55% 35%;
+	justify-content: space-between;
+
+	.posts-wrapper	{
+		//border: 1px dotted #999;
+
+		.post 	{
+			margin: 10rem auto;
+			box-shadow: 2px 2px 25px 0 #d8d8d8;
+
+			.content 	{
+				padding: 2rem;
+
+				.meta	{
+					color: #999;
+				}
+
+				.body 	{
+					line-height: 3rem;
+					letter-spacing: 0.01rem;
+					font-size: 105%;
+				}
+			}
+		}
+	}
+
+	.posts-sidebar	{
+		//border: 1px dotted #999;
+		display: grid;
+		justify-content: center;
+
+		.sidebar-widget	{
+			h4	{
+				color: #333;
+			}
+		}
+	}
+}
+
+/* ===============================================
+				Blog - Detail 
+=============================================== */
+
+/* ----------- post comments ----------- */
+
+.leave-comment	{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.post-comments	{
+	//border: 2px solid red;
+	width: 60%;
+	margin: 0 auto;
+
+	.comment 	{
+		box-shadow: 2px 2px 25px 0 #d8d8d8;
+		margin: 2rem auto;
+		padding: 1rem;
+
+		footer p 	{
+			color: #999;
+			font-size: 80%;
+		}
+	}
+}
+
+/* ===============================================
+			Blog - Category Archive
+=============================================== */
+
+/* ===============================================
+			Blog - Author Archive
+=============================================== */
+
+/* ===============================================
+			Blog - Date Archive
+=============================================== */
+
 // def page body class
 
 .defpage_body	{
@@ -404,6 +436,58 @@
 	background-color: base.$dark_blue;
 	color: base.$white;
 	margin-bottom: 10rem;
+}
+
+/* -------- site footer -------- */
+
+.site-footer 	{
+	margin: 10rem 0 0 0;
+
+	.footer-credits	{
+		//background: #151B25;
+		background: base.$dark_blue;
+		color: base.$white;
+		padding: 1rem;
+		margin-top: 2rem;
+	}
+}
+
+.footer-widgets	{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.widget 	{
+		padding: 1rem;
+		width: 40rem;
+		min-width: 30rem;
+		margin: 1rem;
+
+		h2	{
+			text-align: center;
+		}
+
+		&:nth-child(2)	{
+			//border: 1px dotted #999;
+
+			ul 	{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			a 	{
+				text-decoration: none;
+				transition: .3s all ease-out;
+				animation: shake .5s 1;
+				animation-play-state: paused;
+
+				&:hover	{
+					animation-play-state: running;
+				}
+			}
+		}
+	}
 }
 
 // footer socials

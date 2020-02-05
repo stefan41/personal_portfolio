@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block body_class %}defpage_body{% endblock %}
+{% block head_class %}defpage_head{% endblock %}
+
+{% block content %}
+
+<div class="blogdetail-container">
+	
+	<div class="singlepost-wrapper">
+		
+		<div class="singlepost">
+			
+			<div class="thumb">
+				<img src="{{ post.thumbnail.url }}">
+			</div>
+
+			<div class="content">
+				<h2 class="title">{{ post.title }}</h2>
+				<p class="meta">Created on <span>{{ post.created_on }}</span>
+					in 
+					{% for category in post.categories.all %}
+					<span><a href="{% url 'blog:category' category.name %}">{{ category.name }}</a></span>
+					{% endfor %}
+				</p>
+				<p class="body">{{ post.body }}</p>
+			</div>
+
+		</div>
+
+		<div class="leave-comment">
+			<h3>Leave a comment:</h3>
+			<form action="/blog/{{post.pk}}/" method="post">
+				{% csrf_token %}
+				<div class="form-group">
+					{{ form.author }}
+				</div>
+				<div class="form-group">
+					{{ form.body }}
+				</div>
+				<button type="submit" class="btn-primary">Submit</button>
+			</form>
+		</div>
+
+		<div class="post-comments">
+			<h3>Comment Section:</h3>
+			{% for comment in comments %}
+			<div class="comment">
+				<header>
+					<h4>{{ comment.author }} wrote:</h4>
+				</header>
+				<main>
+					<p>{{ comment.body }}</p>
+				</main>
+				<footer>
+					<p>{{ comment.created_on.date }}</p>
+				</footer>
+			</div>
+			{% endfor %}
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

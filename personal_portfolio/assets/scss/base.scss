@@ -47,27 +47,15 @@ body 	{
 	font-size: 2rem;
 	font-family: $sans4;
 	background-color: $white;
-	color: $black;
+	color: #222222;
 }
 
 img 	{
 	max-width: 100%;
 }
 
-.read-more 	{
-	@extend %btn;
-	padding: 1rem;
-	text-decoration: none;
-	background-color: $dark_blue;
-	color: $white;
-	border: 2px solid transparent;
-	transition: .3s all ease-out;
-
-	&:hover	{
-		border: 2px solid $dark_blue;
-		color: $dark_blue;
-		background-color: transparent;
-	}
+.txtinput	{
+	@extend %form-input;
 }
 
 %form-input	{
