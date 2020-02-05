@@ -54,6 +54,46 @@ img 	{
 	max-width: 100%;
 }
 
+.read-more 	{
+	@extend %btn;
+	padding: 1rem;
+	text-decoration: none;
+	background-color: $dark_blue;
+	color: $white;
+	border: 2px solid transparent;
+	transition: .3s all ease-out;
+
+	&:hover	{
+		border: 2px solid $dark_blue;
+		color: $dark_blue;
+		background-color: transparent;
+	}
+}
+
+%form-input	{
+	border: 1px solid #d8d8d8;
+	width: 100%;
+	height: 5rem;
+	padding-left: 1rem;
+	font-family: $sans4;
+	font-size: 100%;
+	box-shadow: 1px 1px 10px 0 #d8d8d8;
+	transition: .3s all ease-out;
+
+	&:focus	{
+		box-shadow: 2px 2px 20px 0 #d8d8d8;
+	}
+}
+
+.form-group	{
+	input:not([type='submit']),
+	textarea	{
+		@extend %form-input;
+	}
+}
+
+
+
 /* ========== Custom Classes ========== */
 
 .center	{

@@ -1,10 +1,32 @@
 {% extends 'base.html' %}
 
+{% block body_class %}defpage_body{% endblock %}
+{% block head_class %}defpage_head{% endblock %}
+
 {% block content %}
 
 <div class="prdetail-container">
 	
-	<h1>Project Detail Page</h1>
+	<!-- singleproject-wrapper -->
+	<div class="singleproject-wrapper">
+		
+		<div class="singleproject">
+			
+			<div class="thumb">
+				<img src="{{ project.screenshot.url }}">
+			</div>
+
+			<div class="content">
+				<h2 class="title">{{ project.title }}</h2>
+				<p class="meta">Created on <span>{{ project.created_on }}</span></p>
+				<p class="description">{{ project.description }}</p>
+				<p class="tech">{{ project.technology }}</p>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /singleproject-wrapper -->
 
 </div>
 

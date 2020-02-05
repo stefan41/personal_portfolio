@@ -26,6 +26,36 @@ img {
   max-width: 100%;
 }
 
+.read-more {
+  padding: 1rem;
+  text-decoration: none;
+  background-color: #011627;
+  color: #FCF7FF;
+  border: 2px solid transparent;
+  transition: 0.3s all ease-out;
+}
+.read-more:hover {
+  border: 2px solid #011627;
+  color: #011627;
+  background-color: transparent;
+}
+
+.form-group input:not([type=submit]),
+.form-group textarea {
+  border: 1px solid #d8d8d8;
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 100%;
+  box-shadow: 1px 1px 10px 0 #d8d8d8;
+  transition: 0.3s all ease-out;
+}
+.form-group input:focus:not([type=submit]),
+.form-group textarea:focus {
+  box-shadow: 2px 2px 20px 0 #d8d8d8;
+}
+
 /* ========== Custom Classes ========== */
 .center {
   text-align: center;
@@ -75,14 +105,14 @@ div .center {
   margin: 0 auto;
 }
 
-.btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn {
+.btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn, .read-more {
   padding: 1.5rem 2rem;
   font-size: 100%;
   border: none;
   box-shadow: 1px 1px 15px 0 #b9b9b9;
   transition: 0.3s all ease-out;
 }
-.btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover {
+.btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover, .read-more:hover {
   box-shadow: 2px 2px 15px 0 #999;
   cursor: pointer;
 }

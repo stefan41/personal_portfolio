@@ -32,11 +32,11 @@
 
 </head>
 
-<body>
+<body class="{% block body_class %}base_body{% endblock %}">
 	<div class="page-container">
 		
 		<!-- site-header -->
-  		<header class="site-header">
+  		<header class="site-header {% block head_class %}home_head{% endblock %}">
 	        <h1>Personal Portfolio - Django</h1>
 
 	        <!-- main-nav -->

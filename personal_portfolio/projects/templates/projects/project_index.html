@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% block body_class %}defpage_body{% endblock %}
+{% block head_class %}defpage_head{% endblock %}
+
 {% block content %}
 
 <div class="prindex-container">
@@ -9,16 +12,16 @@
 		{% for project in projects %}
 		<div class="project">
 			
-			<div class="project-thumbnail">
-				<img src="{{ project.screenshot.url }}">
+			<div class="thumbnail">
+				<a href="{% url 'projects:detail' project.pk %}"><img src="{{ project.screenshot.url }}"></a>
 			</div>
 
-			<div class="project-content">
-				<h2>{{ project.title }}</h2>
-				<p>{{ project.description }}</p>
-				<p>{{ project.technology }}</p>
+			<div class="content">
+				<h2 class="title">{{ project.title }}</h2>
+				<p class="description">{{ project.description|truncatewords:50 }}</p>
+				<p class="tech">{{ project.technology }}</p>
 				<p>Created on <span>{{ project.created_on.date }}</span></p>
-				<a href="{% url 'projects:detail' project.pk %}">Read More</a>
+				<a class="read-more" href="{% url 'projects:detail' project.pk %}">Read More</a>
 			</div>
 
 		</div>
