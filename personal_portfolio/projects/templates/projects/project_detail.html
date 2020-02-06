@@ -19,7 +19,7 @@
 			<div class="content">
 				<h2 class="title">{{ project.title }}</h2>
 				<p class="meta">Created on <span>{{ project.created_on }}</span></p>
-				<p class="description">{{ project.description }}</p>
+				<p class="description">{{ project.description|safe }}</p>
 				<p class="tech">{{ project.technology }}</p>
 			</div>
 

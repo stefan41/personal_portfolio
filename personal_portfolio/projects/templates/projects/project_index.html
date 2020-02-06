@@ -18,7 +18,7 @@
 
 			<div class="content">
 				<h2 class="title">{{ project.title }}</h2>
-				<p class="description">{{ project.description|truncatewords:50 }}</p>
+				<p class="description">{{ project.description|truncatewords:50|safe }}</p>
 				<p class="tech">{{ project.technology }}</p>
 				<p>Created on <span>{{ project.created_on.date }}</span></p>
 				<a class="read-more" href="{% url 'projects:detail' project.pk %}">Read More</a>

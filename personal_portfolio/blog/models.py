@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Category(models.Model):
@@ -14,8 +15,10 @@ class Category(models.Model):
 
 class Post(models.Model):
 	title = models.CharField(max_length=255)
-	description = models.TextField()
-	body = models.TextField()
+	#description = models.TextField()
+	description = RichTextField()
+	#body = models.TextField()
+	body = RichTextField()
 	thumbnail = models.ImageField(default='default.png', blank=True)
 	# author
 	created_on = models.DateTimeField(auto_now_add=True)

@@ -23,7 +23,7 @@
 					<span><a href="{% url 'blog:category' category.name %}">{{ category.name }}</a></span>
 					{% endfor %}
 				</p>
-				<p class="body">{{ post.body }}</p>
+				<p class="body">{{ post.body|safe }}</p>
 			</div>
 
 		</div>
