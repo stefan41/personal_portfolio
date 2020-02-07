@@ -26,7 +26,8 @@ img {
   max-width: 100%;
 }
 
-.form-group input:not([type=submit]),
+.login #container #login-form input[type=text],
+.login #container #login-form input[type=password], .form-group input:not([type=submit]),
 .form-group textarea, .txtinput {
   border: 1px solid #d8d8d8;
   width: 100%;
@@ -37,7 +38,8 @@ img {
   box-shadow: 1px 1px 10px 0 #d8d8d8;
   transition: 0.3s all ease-out;
 }
-.form-group input:focus:not([type=submit]),
+.login #container #login-form input[type=text]:focus,
+.login #container #login-form input[type=password]:focus, .form-group input:focus:not([type=submit]),
 .form-group textarea:focus, .txtinput:focus {
   box-shadow: 2px 2px 20px 0 #d8d8d8;
 }
@@ -91,14 +93,14 @@ div .center {
   margin: 0 auto;
 }
 
-.btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn {
+.login #container #login-form input[type=submit], .btn-light, .btn-dark, .btn-success, .btn-seduce, .btn-info, .btn-primary, .btn {
   padding: 1.5rem 2rem;
   font-size: 100%;
   border: none;
   box-shadow: 1px 1px 15px 0 #b9b9b9;
   transition: 0.3s all ease-out;
 }
-.btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover {
+.login #container #login-form input[type=submit]:hover, .btn-light:hover, .btn-dark:hover, .btn-success:hover, .btn-seduce:hover, .btn-info:hover, .btn-primary:hover, .btn:hover {
   box-shadow: 2px 2px 15px 0 #999;
   cursor: pointer;
 }
@@ -188,5 +190,50 @@ div .center {
 /* =======================================
 			Contact Page Styles
 ======================================= */
+body #container {
+  font-family: "Barlow", sans-serif;
+}
+
+.login #container {
+  box-shadow: 15px 15px 25px 0 #d8d8d8;
+}
+.login #container #header {
+  background: #011627;
+  color: #FCF7FF;
+}
+.login #container #header #site-name {
+  font-size: 200%;
+}
+.login #container #login-form input[type=text],
+.login #container #login-form input[type=password] {
+  font-family: "Quicksand", sans-serif;
+}
+.login #container #login-form input[type=text]:focus,
+.login #container #login-form input[type=password]:focus {
+  border: 1px solid #999;
+  box-shadow: 2px 2px 20px 0 #b6b6b6;
+}
+.login #container #login-form input[type=submit] {
+  background: #011627;
+}
+.login #container #login-form input[type=submit]:hover {
+  box-shadow: 4px 4px 10px 0 #999;
+}
+
+body.dashboard #container #header {
+  background: #011627;
+  color: #FCF7FF;
+  padding: 3rem;
+}
+body.dashboard #container #header #site-name a {
+  color: #FCF7FF;
+  transition: 0.3s all ease-out;
+}
+body.dashboard #container #header #site-name a:hover {
+  color: #d9d9d9;
+}
+body.dashboard #container #header #user-tools {
+  width: 100%;
+}
 
 /*# sourceMappingURL=admin-extra.css.map */

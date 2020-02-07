@@ -42,6 +42,13 @@ img {
   box-shadow: 2px 2px 20px 0 #d8d8d8;
 }
 
+.singleproject-wrapper .singleproject .content .description, .blogindex-container .posts-wrapper .post .content .body, .singlepost .content p {
+  line-height: 3rem;
+  letter-spacing: 0.01rem;
+  font-size: 105%;
+  text-align: justify;
+}
+
 /* ========== Custom Classes ========== */
 .center {
   text-align: center;
@@ -437,10 +444,6 @@ div .center {
 }
 .singleproject-wrapper .singleproject .content .description {
   margin: 4rem auto;
-  text-align: justify;
-  line-height: 3rem;
-  letter-spacing: 0.01rem;
-  font-size: 105%;
 }
 .singleproject-wrapper .singleproject .content .tech {
   padding: 1rem;
@@ -473,11 +476,6 @@ div .center {
 .blogindex-container .posts-wrapper .post .content .meta {
   color: #999;
 }
-.blogindex-container .posts-wrapper .post .content .body {
-  line-height: 3rem;
-  letter-spacing: 0.01rem;
-  font-size: 105%;
-}
 .blogindex-container .posts-sidebar {
   display: grid;
   justify-content: center;
@@ -489,6 +487,19 @@ div .center {
 /* ===============================================
 				Blog - Detail 
 =============================================== */
+.singlepost {
+  width: 60%;
+  margin: 0 auto;
+}
+.singlepost header {
+  margin: 15rem auto;
+}
+.singlepost .thumb img {
+  box-shadow: 5px 5px 20px 0 #d8d8d8;
+}
+.singlepost .content {
+  margin: 5rem auto;
+}
 /* ----------- post comments ----------- */
 .leave-comment {
   width: 60%;

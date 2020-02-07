@@ -80,7 +80,13 @@ img 	{
 	}
 }
 
-
+// fluid paragraph styling
+%fluid 	{
+	line-height: 3rem;
+	letter-spacing: 0.01rem;
+	font-size: 105%;
+	text-align: justify;
+}
 
 /* ========== Custom Classes ========== */
 

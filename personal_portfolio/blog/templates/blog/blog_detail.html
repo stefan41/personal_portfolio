@@ -10,12 +10,8 @@
 	<div class="singlepost-wrapper">
 		
 		<div class="singlepost">
-			
-			<div class="thumb">
-				<img src="{{ post.thumbnail.url }}">
-			</div>
 
-			<div class="content">
+			<header class="center">
 				<h2 class="title">{{ post.title }}</h2>
 				<p class="meta">Created on <span>{{ post.created_on }}</span>
 					in 
@@ -23,6 +19,13 @@
 					<span><a href="{% url 'blog:category' category.name %}">{{ category.name }}</a></span>
 					{% endfor %}
 				</p>
+			</header>
+			
+			<div class="thumb">
+				<img src="{{ post.thumbnail.url }}">
+			</div>
+
+			<div class="content">
 				<p class="body">{{ post.body|safe }}</p>
 			</div>
 

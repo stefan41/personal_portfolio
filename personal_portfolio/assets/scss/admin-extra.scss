@@ -1,5 +1,80 @@
 @use 'base';
 
+body	{
+
+	#container	{
+		font-family: base.$sans1;
+
+	}
+}
+
 .login	{
-	background: red;
+
+	#container	{
+		//border: 2px solid red !important;
+		box-shadow: 15px 15px 25px 0 #d8d8d8;
+
+		#header	{
+			background: base.$dark_blue;
+			color: base.$white;
+
+			#site-name	{
+				font-size: 200%;
+			}
+		}
+
+		#login-form	{
+			//border: 2px solid blue;
+
+			input[type='text'],
+			input[type='password']	{
+				@extend %form-input;
+				font-family: base.$sans4;
+
+				&:focus	{
+					border: 1px solid #999;
+					box-shadow: 2px 2px 20px 0 #b6b6b6;
+				}
+			}
+
+			input[type='submit']	{
+				@extend %btn;
+				background: base.$dark_blue;
+
+				&:hover	{
+					box-shadow: 4px 4px 10px 0 #999;
+				}	
+			}
+		}
+	}
+}
+
+body.dashboard	{
+	//border: 2px solid blue;
+
+	#container	{
+
+
+		#header	{
+			background: base.$dark_blue;
+			color: base.$white;
+			padding: 3rem;
+
+			#site-name	{
+
+				a	{
+					color: base.$white;
+					transition: .3s all ease-out;
+
+					&:hover	{
+						color: #d9d9d9;
+					}
+				}
+			}
+
+			#user-tools	{
+				width: 100%;
+			}
+		}
+	}
 }

@@ -315,11 +315,8 @@
 			}
 
 			.description 	{
+				@extend %fluid;
 				margin: 4rem auto;
-				text-align: justify;
-				line-height: 3rem;
-				letter-spacing: 0.01rem;
-				font-size: 105%;
 			}
 
 			.tech	{
@@ -364,9 +361,7 @@
 				}
 
 				.body 	{
-					line-height: 3rem;
-					letter-spacing: 0.01rem;
-					font-size: 105%;
+					@extend %fluid;
 				}
 			}
 		}
@@ -388,6 +383,34 @@
 /* ===============================================
 				Blog - Detail 
 =============================================== */
+
+.blogdetail-container	{
+	//border: 2px solid red;
+}
+
+.singlepost	{
+	width: 60%;
+	margin: 0 auto;
+
+	header 	{
+		margin: 15rem auto;
+	}
+
+	.thumb 	{
+		img 	{
+			box-shadow: 5px 5px 20px 0 #d8d8d8;
+		}
+	}
+
+	.content 	{
+		margin: 5rem auto;
+
+		p 	{
+			@extend %fluid;
+		}
+	}
+}
+
 
 /* ----------- post comments ----------- */
 

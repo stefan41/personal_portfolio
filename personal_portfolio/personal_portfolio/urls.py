@@ -9,9 +9,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('projects/', include('projects.urls')),
     path('blog/', include('blog.urls')),
+    path('contact/', include('sendmail.urls')),
     path('', views.homepage, name='home'),
     path('about/', views.aboutpage, name='about'),
-    path('contact/', views.contactpage, name='contact'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
